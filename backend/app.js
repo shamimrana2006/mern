@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 
 app.get("/",(req,res)=>{
-    res.send("<h1>Shamim done")
+    res.json({name: "shamim rana"})
 })
 
 app.use((req,res,next)=>{
@@ -12,4 +12,4 @@ app.use((req,res,next)=>{
     })
 })
 
-module.exports = app
+module.exports = app 
