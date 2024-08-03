@@ -21,4 +21,16 @@ app.use((req,res,next)=>{
     })
 })
 
+app.use((req,res,next)=>{
+    throw {
+        "message" : "failded",
+        "status" : 404
+    }
+    next()
+})
+
+app.use((err,req,res,next) =>{
+    res.json(err)
+})
+
 module.exports = app 
