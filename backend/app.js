@@ -30,7 +30,7 @@ app.use((req,res,next)=>{
 })
 
 app.use((err,req,res,next) =>{
-    res.json(err)
+    res.json("error: " , err)
 })
 
 module.exports = app 
