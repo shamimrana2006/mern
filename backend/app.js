@@ -8,6 +8,12 @@ app.get("/",(req,res)=>{
     res.json({name: "shamim rana"})
 })
 
+app.post("/", (req,res)=>{
+    const {name} = req.body
+    res.json({name})
+        
+})
+
 app.use((req,res,next)=>{
     res.json({
         "message" : "failded",
